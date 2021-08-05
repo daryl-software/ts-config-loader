@@ -1,0 +1,62 @@
+{
+  "extends": ["eslint:recommended", "plugin:node/recommended", "plugin:prettier/recommended"],
+  "plugins": ["node"],
+  "rules": {
+    "node/no-extraneous-import": ["error"],
+    "curly": ["error", "all"],
+    "object-shorthand": "error",
+    "block-scoped-var": "error",
+    "eqeqeq": "error",
+    "no-var": "error",
+    "prefer-const": "error",
+    "eol-last": "error",
+    "prefer-arrow-callback": "error",
+    "no-trailing-spaces": "error",
+    "quotes": ["warn", "single", { "avoidEscape": true }],
+    "no-restricted-properties": ["error"],
+    "arrow-body-style": ["error", "as-needed"],
+    "no-empty-pattern": "off",
+    "no-unused-vars": "error",
+    "no-duplicate-imports": "error",
+    "no-useless-concat": "error",
+    "prefer-template": "error",
+    "prefer-destructuring": "error",
+    "no-console": "error"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts"],
+      "parser": "@typescript-eslint/parser",
+      "extends": ["plugin:@typescript-eslint/recommended"],
+      "rules": {
+        "@typescript-eslint/no-namespace": "off",
+        "@typescript-eslint/member-ordering": ["error", { "default": ["signature", "field", "public-static-field", "static-field", "constructor", "method"] }],
+        "@typescript-eslint/switch-exhaustiveness-check": "error",
+        "@typescript-eslint/no-unused-vars": "error",
+        "@typescript-eslint/return-await": "error",
+        "@typescript-eslint/no-throw-literal": "error",
+        "@typescript-eslint/array-type": "error",
+        "@typescript-eslint/no-use-before-define": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/ban-types": "off",
+        "@typescript-eslint/camelcase": "off",
+        "node/no-missing-import": "off",
+        "node/no-empty-function": "off",
+        "node/no-unsupported-features/es-syntax": "off",
+        "node/no-missing-require": "off",
+        "node/shebang": "off",
+        "no-dupe-class-members": "off",
+        "require-atomic-updates": "off",
+        "require-await": "error"
+      },
+      "parserOptions": {
+        "ecmaVersion": 2021,
+        "sourceType": "script"
+      }
+    }
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
+}
