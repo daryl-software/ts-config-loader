@@ -1,6 +1,6 @@
 import { diff } from "deep-object-diff";
-import merge from 'lodash.merge';
-import { watch } from 'chokidar';
+import merge from "lodash.merge";
+import { watch } from "chokidar";
 
 type ConfigObserver<T = any> = (updatedConfig: T, diff: unknown) => void;
 type ConfigLoaderOptions = { verbose?: boolean };
