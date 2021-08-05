@@ -1,5 +1,5 @@
 {
-  "name": "ts-config-loader",
+  "name": "@ezweb/ts-config-loader",
   "version": "1.0.0",
   "description": "A simple json files loader",
   "main": "lib/index.js",
