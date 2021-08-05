@@ -9,7 +9,6 @@ type TestConfig = {
     rediscluster: {
         servers: string[];
     };
-
 };
 
 describe('Config Loader', async () => {
